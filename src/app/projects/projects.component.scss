@@ -1,0 +1,129 @@
+
+
+body{
+  background: #D9D9D9;
+}
+
+.title {
+  border: 5px solid #1F1F1F;
+  padding: 10px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 100px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px; // Adjust padding if needed
+  box-sizing: border-box;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.swiper-slide h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.swiper-slide p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; // Change arrow color if needed
+  position: absolute;
+  top: 50%; // Vertically center the arrows
+  transform: translateY(-50%); // Adjust vertical alignment
+  z-index: 10; // Ensure arrows are above other content
+  width: 30px; // Adjust arrow size
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff; // Arrow background color
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); // Add shadow for better visibility
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px; // Adjust arrow icon size
+}
+
+.swiper-button-next {
+  right: 10px; // Position to the right
+}
+
+.swiper-button-prev {
+  left: 10px; // Position to the left
+}
+
+.swiper-pagination-bullet {
+  width: 10px; // Adjust bullet size
+  height: 10px;
+  background-color: #000; // Bullet color
+  opacity: 1;
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff; // Active bullet color
+}
+
+.cta-btn {
+  background: #1F1F1F;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #1F1F1F;
+  color: #F8F7F9;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.5s, color 0.5s;
+  border-radius: 5px; /* Adjust the radius value as needed */
+
+  &:hover {
+    background: #F8F7F9;
+    color: #1F1F1F;
+  }
+}
+
+.image-container {
+  margin-top: 100px;
+  text-align: center;
+
+}
+
+.separator {
+  display: inline-block;
+}
+

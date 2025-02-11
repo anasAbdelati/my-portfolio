@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.header {
+  background-color: #1F1F1F;
+  color: #F8F7F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+
+
+  .logo{
+    margin-top: 10px;
+  }
+
+  .buttons-header {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    a{
+      color:white;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0 40px; // Adjust spacing between buttons
+    }
+
+    .vl {
+      border-left: 1px solid #F8F7F9;
+      height: 30px;
+      margin: 0 30px;
+    }
+
+    .icone-linkedin {
+        width: auto;
+        height: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .icone_cv {
+      width: auto;
+      height: 35px;
+      margin-left: 30px;
+      margin-right: 40px;
+    }
+  }
+}
