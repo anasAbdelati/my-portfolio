@@ -4,19 +4,32 @@ body{
   background: #D9D9D9;
 }
 
-.title {
-  border: 5px solid #1F1F1F;
-  padding: 10px;
-  width: 200px;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif !important;
-  letter-spacing: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#projects {
+  padding-top: 60px; /* Creates spacing below Experience */
+  background: #D9D9D9; /* Ensures no white gaps */
+}
 
-  margin-bottom: 100px;
+.title {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  padding-top: 0!important;
+  margin-top: 0!important;
+  position: relative;
+  /* Remove or adjust this fixed width */
+  width: 1800px; /* Reduce from 1220px or make it fit your container */
+  padding-left: 125px;
+
+}
+
+.title::after {
+  content: '';
+  flex-grow: 1;
+  height: 2px;
+  background: #000;
+  margin-left: 10px;
+  /* Add a max-width to limit how far the line extends */
 }
 
 .swiper-container {
@@ -118,7 +131,7 @@ body{
 }
 
 .image-container {
-  margin-top: 100px;
+  margin-top: 30px;
   text-align: center;
 
 }

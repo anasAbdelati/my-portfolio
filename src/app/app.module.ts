@@ -10,6 +10,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContaceMeComponent } from './contace-me/contace-me.component';
 import { FooterComponent } from './footer/footer.component';
+import {CommonModule} from "@angular/common";
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { FooterComponent } from './footer/footer.component';
     AboutMeComponent,
     ProjectsComponent,
     ContaceMeComponent,
-    FooterComponent
+    FooterComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

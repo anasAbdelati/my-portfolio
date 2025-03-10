@@ -3,23 +3,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   background: linear-gradient(to bottom, #1F1F1F, #D9D9D9);
   color: #F8F7F9;
   font-family: 'Poppins', sans-serif;
 
-  h5 {
+  h4 {
     margin: 0;
     font-weight: 400;
-    letter-spacing: 2px;
+    line-height: 1.6;
   }
 
   h1 {
     margin: 10px 0 0 0;
     font-weight: 700;
     font-size: 3rem;
+    .name {
+      color: #333333;
+    }
   }
 
+  .content{
+    max-width: 1100px;
+  }
   .cta-btn {
     display: inline-block;
     margin-top: 20px;
