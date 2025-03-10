@@ -14,23 +14,23 @@ Swiper.use([Navigation, Pagination]);
 export class ProjectsComponent implements AfterViewInit {
   projects = [
     {
-      image: '../../assets/portfolioScreen.png',
+      image: 'assets/portfolioScreen.png',
       name: 'Portfolio',
       description: 'its the porfolio that are you are currently in'
     },
     {
-      image: '../../assets/mobileApp.png',
+      image: 'assets/mobileApp.png',
       name: 'Android application',
       description: 'mobile application for restaurant reservation, I am still working on this project which is why its still private on my github'
     },
     {
-      image: '../../assets/api.png',
+      image: 'assets/api.png',
       name: 'VirVoile Rest Api',
       description: "I developed the backend with Spring Boot, implemented the CI/CD pipeline using " +
         "GitLab CI, and deployed the application with Docker Swarm. This API was used by a sailing simulator for professionals."
     },
     {
-      image: '../../assets/Loading.png',
+      image: 'assets/Loading.png',
       name: 'Comming Soon',
       description: ''
     },
