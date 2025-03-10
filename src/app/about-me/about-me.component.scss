@@ -1,147 +1,160 @@
-@keyframes wiggle {
-  0% {
-    transform: rotate(-3deg);
-  }
-  50% {
-    transform: rotate(3deg);
-  }
-  100% {
-    transform: rotate(-3deg);
-  }
-}
-
-@keyframes anime {
-  100% {
-    transform: translateY(20px);
-    -webkit-transform:translateY(20px);
-    -moz-transform:translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform:translateY(20px);
-  }
-}
-
-@keyframes anime2 {
-  100% {
-    transform: translateY(20px);
-    -webkit-transform:translateY(20px);
-    -moz-transform:translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform:translateY(20px);
-    box-shadow: 0 45px 10px -18px rgba(0,0,0,0.2) , 0 45px 16px -12px rgba(0,0,0,0.2);
-
-  }
-}
-
-@keyframes scaleAnimation {
-  0%, 100% {
-    transform: scale(1); /* Start and end scale */
-  }
-  50% {
-    transform: scale(1.1); /* Middle scale */
-  }
-}
-
 body {
   background: #D9D9D9;
-  height: 100vh!important;
+  font-family: 'Poppins', sans-serif;
   display: flex;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 50px 0;
+  position: relative;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: center; /* Keep it centered horizontally */
+  min-height: 80vh; /* Adjust this value to move it further up */
+}
+
+/* General Title Styling */
 .title {
-  border: 5px solid #1F1F1F;
-  padding: 10px;
-  width: 200px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em; /* Adjust the font size as needed */
+  margin: 20px 0;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  flex-grow: 1; /* Allow the line to take up remaining space */
+  height: 2px;
+  background: #000; /* Color of the line */
+  margin-left: 10px; /* Space between text and line */
+}
+
+/* Left section (About Me) */
+.about-me {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif !important;
-  letter-spacing: 6px;
+  position: absolute;
+  left: 50%;
+  padding-right: 100px;
+  transform: translateX(-70%);
 }
 
 .intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 30px auto -20px;
-  max-width: 1100px;
-  line-height: 2;
+  line-height: 1.8;
   font-size: 18px;
-  font-family: 'Poppins', sans-serif!important;
+  margin-bottom: 20px;
 }
 
-img {
-  margin-top: 20px;
-  margin-bottom: 40px;
+.highlight {
+  color: #1F1F1F;
+  font-weight: bold;
 }
 
-.technos-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-  gap: 20px 40px; /* 20px vertical, 40px horizontal space between items */
-  justify-items: center;
-  align-items: center;
-  padding: 20px;
-  max-width: 1200px; /* Optional: constrain the section width */
-  margin: 0 auto; /* Center the section */
-}
-
-.tech-item {
+.intro h2 {
+  font-size: 1.8em;
+  color: #333;
   text-align: center;
-  margin: 0;
-
+  margin-bottom: 20px;
 }
 
-.tech-item:hover {
-  animation: wiggle 1s ease-in-out infinite alternate;
-  -webkit-animation: wiggle 1s ease-in-out infinite alternate;
+.intro p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
-.tech-item img {
-  padding: 5px;
-  max-width: 80px; /* Adjust the size as needed */
-  height: auto;
-  display: block;
-  margin: 0 auto 10px; /* Margin between the image and the text */
-  animation: scaleAnimation 1s ease-in-out infinite alternate;
-  -webkit-animation: scaleAnimation 1s ease-in-out infinite alternate;
+.intro .keywords {
+  color: #1F1F1F;
+  font-weight: bold;
 }
 
-.tech-item p {
-  margin: 0;
-  font-size: 14px; /* Adjust the font size as needed */
-  font-weight: bold; /* Make the text bold to match the example */
+.cv {
+  margin-top: 15px;
 }
 
-.last-row {
-  margin-left:20px;
-  grid-column: 2 / span 2; /* Span 2 columns starting from the 2nd column */
-  display: flex;
-  justify-content: center;
-  gap: 200px; /* Adjust the gap between the two items */
-}
-
-.cv{
-  margin-top: 100px;
-  margin-bottom: 60px;
-}
 .cv a {
   color: inherit;
   text-decoration: none;
 }
-.cv a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-.cv h5 {
-  margin: 0;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  //box-shadow: 0 70px 12px -18px rgba(0,0,0,0.1), 0 70px 20px -12px rgba(0,0,0,0.1);
-  //animation: anime2 1s ease-in-out infinite alternate;
-  //-webkit-animation: anime2 1s ease-in-out infinite alternate;
+
+/* Skills Section */
+.skills {
+  width: 450px; /* Make it wider */
+  text-align: left;
+  position: absolute;
+  right: -150px; /* Adjust to move it further right */
+  top: 50px;
 }
 
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #D9D9D9;
+  color: #1F1F1F;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%; /* Ensure the container adjusts to its parent's width */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.skills-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-category h4 {
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #1F1F1F;
+  padding-bottom: 5px;
+  margin: 0 0 8px 0;
+}
+
+.skills-category span {
+  display: inline-block;
+  background: #D9D9D9;
+  color: #1F1F1F;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid #1F1F1F;
+  margin: 2px;
+  white-space: nowrap;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me, .skills {
+    position: static;
+    transform: none;
+  }
+
+  .about-me {
+    margin-bottom: 50px;
+  }
+
+  .skills {
+    margin: 0 auto;
+    text-align: center;
+  }
+}

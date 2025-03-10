@@ -6,77 +6,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <title>Hero Section</title>
 </head>
-<body id="aboutMe">
-<section class="aboutMe">
-    <div class="title">
-      <h5><b>ABOUT ME</b></h5>
-    </div>
-  <div class="intro">
-    <p>
-      My name is Anas Abdelati, a full-stack developer apprentice in the final year of my master's degree in software engineering at Paul Sabatier University in Toulouse.
-      I created this portfolio website to enhance my front-end development skills and to help me discover new opportunities
+<body>
+
+<div class="container">
+  <!-- About Me Section -->
+  <div id="aboutMe" class="about-me">
+    <div class="title"><h1>About Me.</h1></div>
+    <p class="intro">
+      I first got into <span class="keywords">development</span> after high school, thinking I was good with computers
+      (mainly because I played video games). However, I quickly realized I didn’t know much about programming itself.
+      I struggled with basic algorithm problems early on, but I was determined to learn. I spent countless nights
+      understanding the fundamentals—things like <span class="highlight">loops</span> and <span class="highlight">variables</span>—and eventually
+      got hooked on coding. Over time, I found my passion in <span class="highlight">software development</span> rather than algorithmic challenges,
+      and that's when everything clicked.
+      <br><br>
+      During my first year studying <span class="highlight">computer science</span>, I built a simple chess game in Python, and despite the messy code filled with
+      hundreds of "if" conditions, I was immensely proud when it worked! That project marked the beginning of my journey as a software developer.
+      Since then, I’ve worked on various projects, ranging from small games and CRUD applications to mobile apps and cross-platform solutions.
+      My proudest achievement was fully developing a <span class="highlight">SaaS product</span>, handling the entire development process from
+      coding to testing and deployment across multiple environments.
+      <br><br>
+      I hold a <span class="highlight">Master’s in Software Engineering</span> from <span class="highlight">Université Toulouse III - Paul Sabatier</span>,
+      and have had the chance to work with great companies like <span class="highlight">Sopra Steria</span>
+      as a full-stack intern and <span class="highlight">Thales</span>
+      , where I’m currently working as a <span class="highlight">Software and DevOps Engineer Apprentice</span>
+      in the <span class="highlight">Air Traffic Management sector</span>
+      <br><br>
+      I'm actively seeking new opportunities to continue developing my skills as a software engineer while contributing to a team that’s passionate about creating innovative solutions. If you think I’d be a good fit, let’s connect and discuss how I can add value to your team!
     </p>
   </div>
-
-  <div class="container mt-5 text-center">
-    <div class="cv">
-      <a href="assets/CV.pdf" target="_blank">
-        <h5>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</h5>
-      </a>
-    </div>
-  </div>
-  <img src="assets/separatorBlack%201.png" class="seperator">
-</section>
-
-<section class="skills">
-  <div class="title">
-    <h5><b>SKILLS</b></h5>
-  </div>
-  <section class="technos-section">
-    <div class="tech-item">
-      <img src="assets/icons/iconeSpring.svg" alt="Spring">
-      <p>Spring / Spring Boot</p>
-    </div>
-    <div class="tech-item">
-      <img src="assets/icons/icons8-angular.svg" alt="Angular">
-      <p>Angular</p>
-    </div>
-    <div class="tech-item">
-      <img src="assets/icons/icons8-html.svg" alt="HTML">
-      <p>HTML</p>
-    </div>
-    <div class="tech-item">
-      <img src="assets/icons/icons8-sass.svg" alt="CSS/SASS">
-      <p>CSS / SASS</p>
-    </div>
-    <div class="tech-item">
-      <img src="assets/icons/icons8-vue-js.svg" alt="Vue.js">
-      <p>Vue.js</p>
-    </div>
-    <div class="tech-item">
-      <img src="assets/icons/icons8-docker.svg" alt="Docker">
-      <p>Docker</p>
-    </div>
-    <div class="tech-item">
-      <img src="assets/icons/icons8-python.svg" alt="Python">
-      <p>Python</p>
-    </div>
-    <div class="tech-item">
-      <img src="assets/icons/sql-server.png" alt="SQL">
-      <p>SQL</p>
-    </div>
-    <div class="last-row">
-      <div class="tech-item">
-        <img src="assets/icons/api.png" alt="REST APIs">
-        <p>REST APIs</p>
+  <div class="skills">
+    <div class="title"><h1>Skills.</h1></div>
+    <div class="skills-container">
+      <div class="skills-category">
+        <h4>Frontend</h4>
+        <span>CSS</span><span>SCSS</span><span>HTML</span><span>JavaScript</span><span>TypeScript</span><span>Angular</span><span>Vue.js</span>
+        <span>Cypress</span>
       </div>
-      <div class="tech-item">
-        <img src="assets/icons/devops.png" alt="CI/CD Pipelines">
-        <p>CI/CD Pipelines</p>
+      <div class="skills-category">
+        <h4>Backend</h4>
+        <span>Java / JEE</span><span>Spring Boot</span>
+        <span>Spring Security</span>
+        <span>Spring Batch</span>
+        <span>Hibernate</span><span>Cucumber</span><span>Mockito</span>
+      </div>
+      <div class="skills-category">
+        <h4>Database</h4>
+        <span>SQL</span><span>PostgreSQL</span><span>Oracle</span><span>MySQL</span>
+      </div>
+      <div class="skills-category">
+        <h4>DevOps</h4>
+        <span>Docker</span>
+        <span>Docker Swarm</span>
+        <span>GitLab CI</span>
+        <span>GitHub Actions</span>
+        <span>Helm</span>
+        <span>Kubernetes</span>
+        <span>Ansible</span>
       </div>
     </div>
-  </section>
-  <img src="assets/separatorBlack%201.png" class="seperator">
-</section>
+  </div>
+</div>
+
 </body>
 </html>

@@ -14,26 +14,26 @@ Swiper.use([Navigation, Pagination]);
 export class ProjectsComponent implements AfterViewInit {
   projects = [
     {
-      image: 'path/to/image1.jpg',
-      name: 'Project 1',
-      description: 'Description for project 1'
+      image: '../../assets/portfolioScreen.png',
+      name: 'Portfolio',
+      description: 'its the porfolio that are you are currently in'
     },
     {
-      image: 'path/to/image2.jpg',
-      name: 'Project 2',
-      description: 'Description for project 2'
+      image: '../../assets/mobileApp.png',
+      name: 'Android application',
+      description: 'mobile application for restaurant reservation, I am still working on this project which is why its still private on my github'
     },
     {
-      image: 'path/to/image3.jpg',
-      name: 'Project 3',
-      description: 'Description for project 3'
+      image: '../../assets/api.png',
+      name: 'VirVoile Rest Api',
+      description: "I developed the backend with Spring Boot, implemented the CI/CD pipeline using " +
+        "GitLab CI, and deployed the application with Docker Swarm. This API was used by a sailing simulator for professionals."
     },
     {
-      image: 'path/to/image4.jpg',
-      name: 'Project 4',
-      description: 'Description for project 4'
+      image: '../../assets/Loading.png',
+      name: 'Comming Soon',
+      description: ''
     },
-    // Add more projects as needed
   ];
 
   ngAfterViewInit(): void {
