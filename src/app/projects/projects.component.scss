@@ -1,36 +1,39 @@
-
-
 body{
   background: #D9D9D9;
+
 }
 
 #projects {
-  padding-top: 60px; /* Creates spacing below Experience */
-  background: #D9D9D9; /* Ensures no white gaps */
+  padding-top: 60px;
+  background: #D9D9D9;
+  position: relative;
 }
 
-.title {
+#projects .title {
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   font-size: 1.5em;
-  padding-top: 0!important;
-  margin-top: 0!important;
   position: relative;
-  /* Remove or adjust this fixed width */
-  width: 1800px; /* Reduce from 1220px or make it fit your container */
-  padding-left: 125px;
-
+  width: 100%;
+  max-width: 1500px;
+  left: 50%;
+  transform: translateX(-56%);
+  white-space: nowrap;
 }
 
-.title::after {
+#projects .title::after {
   content: '';
-  flex-grow: 1;
   height: 2px;
   background: #000;
-  margin-left: 10px;
-  /* Add a max-width to limit how far the line extends */
+  flex-grow: 1; /* Allows it to stretch dynamically */
+  margin-left: 20px; /* Keeps space between text and line */
+  width: calc(100% - 200px); /* Extends the line while keeping it controlled */
+  max-width: 1500px; /* Increase to make it longer */
+  display: block;
 }
+
+
 
 .swiper-container {
   width: 100%;
@@ -58,6 +61,7 @@ body{
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .swiper-slide h3 {
