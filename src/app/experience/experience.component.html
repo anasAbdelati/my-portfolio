@@ -1,26 +1,27 @@
+<!-- experience.component.html -->
 <body>
-  <div id="experience" class="experience">
-    <div class="title"><h1>Experience.</h1></div>
+<section class="experience-section" id="experience">
+  <h2 class="section-title">Experience.</h2>
 
-    <div class="experience-card" *ngFor="let exp of experiences">
-      <div class="experience-header">
-        <div>
-          <h3 class="experience-title">{{ exp.title }}</h3>
-          <p class="experience-company">
-            <a *ngIf="exp.link" [href]="exp.link" target="_blank">{{ exp.company }}, {{ exp.location }} 🔗</a>
-            <span *ngIf="!exp.link">{{ exp.company }}, {{ exp.location }}</span>
-          </p>
-        </div>
-        <p class="experience-dates">
-          {{ exp.startDate }} - {{ exp.endDate ? exp.endDate : 'Present' }}
+  <div class="experience-card" *ngFor="let exp of experiences">
+    <div class="experience-header">
+      <div>
+        <h3 class="experience-title">{{ exp.title }}</h3>
+        <p class="experience-company">
+          <a *ngIf="exp.link" [href]="exp.link" target="_blank">{{ exp.company }}, {{ exp.location }} 🔗</a>
+          <span *ngIf="!exp.link">{{ exp.company }}, {{ exp.location }}</span>
         </p>
       </div>
+      <p class="experience-dates">
+        {{ exp.startDate }} - {{ exp.endDate ? exp.endDate : 'Present' }}
+      </p>
+    </div>
 
-      <p [innerHTML]="exp.description"></p>
+    <div class="experience-description" [innerHTML]="exp.description"></div>
 
-      <div class="experience-skills">
-        <span class="skill-tag" *ngFor="let skill of exp.skills">{{ skill }}</span>
-      </div>
+    <div class="experience-skills">
+      <span class="skill-tag" *ngFor="let skill of exp.skills">{{ skill }}</span>
     </div>
   </div>
+</section>
 </body>

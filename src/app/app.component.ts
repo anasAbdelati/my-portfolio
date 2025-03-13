@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   experiences = [
     {
-      title: 'Apprentice - Software engineer Devops',
+      title: 'Apprentice - Software Engineer in the Air Traffic Management Sector',
       company: 'Thales',
       location: 'Toulouse , France',
       startDate: '09/2024',

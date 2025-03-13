@@ -1,89 +1,83 @@
+// experience.component.scss
+
+// Variables to match your existing styles
+$body-background: #d9d9d9;
+$card-background: #121212;
+$text-color-light: white;
+$text-color-dark: #333333;
+
+// Main container - matching the About Me section
+
 body{
-  background: #D9D9D9;
+  background-color: $body-background;
+
+}
+.experience-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 992px) {
+    padding: 20px;
+  }
 }
 
-.experience{
-  width: 100%;
-  max-width: 1200px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-70%);
-}
-
-.title {
+// Title with line - exactly like your About Me section
+.section-title {
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
-  font-size: 1.5em;
-  padding-top: 0!important;
-  margin-top: 0!important;
+  font-size: 2.5em;
   position: relative;
-  /* Remove or adjust this fixed width */
-  width: 1220px; /* Reduce from 1220px or make it fit your container */
+  margin-bottom: 35px;
+  margin-top: 15px;
 }
 
-.title::after {
+.section-title::after {
   content: '';
   flex-grow: 1;
-  height: 2px;
+  height: 1.5px;
   background: #000;
   margin-left: 10px;
-  /* Add a max-width to limit how far the line extends */
 }
 
-/* Make sure the entire section has a full-width grey background */
-.experience-container {
-  width: 100vw; /* Full width of the screen */
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content */
-  padding: 40px 20px;
-  box-sizing: border-box;
-}
-
-/* Title */
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: black;
-  text-align: left;
-  width: 900px; /* Align with content width */
-}
-
-/* Experience card */
+// Experience card
 .experience-card {
-  background-color: #121212; /* Dark background */
+  background-color: $card-background;
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 20px;
-  width: 1200px; /* Fixed width */
-  color: white;
+  margin-bottom: 30px;
+  color: $text-color-light;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
 }
 
-/* Header */
+// Header section
 .experience-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .experience-title {
   font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
+  font-weight: 600;
+  margin: 0 0 5px 0;
 }
 
 .experience-company {
-  font-size: 1rem;
+  margin: 0;
   opacity: 0.8;
+  font-size: 1rem;
 }
 
 .experience-company a {
-  color: white;
+  color: $text-color-light;
   text-decoration: none;
   transition: color 0.2s;
 
@@ -96,24 +90,29 @@ body{
   font-size: 1rem;
   font-style: italic;
   opacity: 0.8;
+
+  @media (max-width: 768px) {
+    margin-top: 5px;
+  }
 }
 
-/* Description */
+// Description
 .experience-description {
-  font-family: 'Poppins', sans-serif;
-
-  font-size: 20px;
-  line-height: 1.8; /* Increase spacing between lines */
-  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
   opacity: 0.9;
+
+  p {
+    margin-top: 0;
+  }
 }
 
-/* Skills section */
+// Skills section
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 10px;
+  gap: 10px;
 }
 
 .skill-tag {
@@ -122,12 +121,37 @@ body{
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
-.experience-card:last-child {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+// Responsive adjustments matching your About Me section
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .experience-description {
+    font-size: 14px;
+  }
+
+  .skill-tag {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .experience-description {
+    font-size: 13px;
+  }
+
+  .skill-tag {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
 }

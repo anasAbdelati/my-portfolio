@@ -1,17 +1,21 @@
-
 <body id="projects">
 <div class="title"><h1>Projects.</h1></div>
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let project of projects">
-        <img [src]="project.image" alt="Project Image">
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-<!--        <a (click)="viewProject(project)" class="cta-btn">View My Project</a>-->
+<div class="projects-container">
+  <div class="project-card" *ngFor="let project of projects">
+    <div class="card-header">
+      <h3>{{ project.name }}</h3>
+      <div class="card-icons">
+        <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank"><i class="fab fa-github"></i></a>
+        <span *ngIf="!project.githubUrl" class="disabled-icon"><i class="fab fa-github"></i></span>
 
+        <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+        <span *ngIf="!project.liveUrl" class="disabled-icon"><i class="fas fa-external-link-alt"></i></span>
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="description" [innerHTML]="project.description"></div>
+    <div class="tech-stack">
+      <span class="tech" *ngFor="let tech of project.technologies">{{ tech }}</span>
+    </div>
   </div>
+</div>
 </body>

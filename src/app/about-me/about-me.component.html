@@ -1,72 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <title>Hero Section</title>
-</head>
-<body>
+<div class="resume-container" id="aboutMe">
+  <div class="resume-content">
+    <!-- Left Column: About Me -->
+    <section class="about-section">
+      <h2 class="section-title">About Me.</h2>
 
-<div class="container">
-  <!-- About Me Section -->
-  <div id="aboutMe" class="about-me">
-    <div class="title"><h1>About Me.</h1></div>
-    <p class="intro">
-      I first got into <span class="keywords">development</span> after high school, thinking I was good with computers
-      (mainly because I played video games). However, I quickly realized I didn’t know much about programming itself.
-      I struggled with basic algorithm problems early on, but I was determined to learn. I spent countless nights
-      understanding the fundamentals—things like <span class="highlight">loops</span> and <span class="highlight">variables</span>—and eventually
-      got hooked on coding. Over time, I found my passion in <span class="highlight">software development</span> rather than algorithmic challenges,
-      and that's when everything clicked.
-      <br><br>
-      During my first year studying <span class="highlight">computer science</span>, I built a simple chess game in Python, and despite the messy code filled with
-      hundreds of "if" conditions, I was immensely proud when it worked! That project marked the beginning of my journey as a software developer.
-      Since then, I’ve worked on various projects, ranging from small games and CRUD applications to mobile apps and cross-platform solutions.
-      My proudest achievement was fully developing a <span class="highlight">SaaS product</span>, handling the entire development process from
-      coding to testing and deployment across multiple environments.
-      <br><br>
-      I hold a <span class="highlight">Master’s in Software Engineering</span> from <span class="highlight">Université Toulouse III - Paul Sabatier</span>,
-      and have had the chance to work with great companies like <span class="highlight">Sopra Steria</span>
-      as a full-stack intern and <span class="highlight">Thales</span>
-      , where I’m currently working as a <span class="highlight">Software and DevOps Engineer Apprentice</span>
-      in the <span class="highlight">Air Traffic Management sector</span>
-      <br><br>
-      I'm actively seeking new opportunities to continue developing my skills as a software engineer while contributing to a team that’s passionate about creating innovative solutions. If you think I’d be a good fit, let’s connect and discuss how I can add value to your team!
-    </p>
-  </div>
-  <div class="skills">
-    <div class="title"><h1>Skills.</h1></div>
-    <div class="skills-container">
-      <div class="skills-category">
-        <h4>Frontend</h4>
-        <span>CSS</span><span>SCSS</span><span>HTML</span><span>JavaScript</span><span>TypeScript</span><span>Angular</span><span>Vue.js</span>
-        <span>Cypress</span>
+      <p class="about-text">
+        I first got into <span class="highlight">development</span> after high school, thinking I was good with computers (mainly because I played video games). However, I quickly realized I didn't know much about programming itself. I struggled with basic algorithm problems early on, but I was determined to learn. I spent countless nights understanding the fundamentals—things like <span class="highlight">loops</span> and <span class="highlight">variables</span>—and eventually got hooked on coding. Over time, I found my passion in <span class="highlight">software development</span> rather than algorithmic challenges, and that's when everything clicked.
+      </p>
+
+      <p class="about-text">
+        During my first year studying <span class="highlight">computer science</span>, I built a simple chess game in Python, and despite the messy code filled with hundreds of "if" conditions, I was immensely proud when it worked! That project marked the beginning of my journey as a software developer. Since then, I've worked on various projects, ranging from small games and CRUD applications to mobile apps and cross-platform solutions. My proudest achievement was fully developing a <span class="highlight">SaaS product</span>, handling the entire development process from coding to testing and deployment across multiple environments.
+      </p>
+
+      <p class="about-text">
+        I hold a <span class="highlight">Master's in Software Engineering</span> from <span class="highlight">Université Toulouse III - Paul Sabatier</span>, and have had the chance to work with great companies like <span class="highlight">Sopra Steria</span> as a full-stack intern and <span class="highlight">Thales</span>, where I'm currently working as a <span class="highlight">Software and DevOps Engineer Apprentice</span> in the <span class="highlight">Air Traffic Management sector</span>
+      </p>
+
+      <p class="about-text">
+        I'm actively seeking new opportunities to continue developing my skills as a software engineer while contributing to a team that's passionate about creating innovative solutions. If you think I'd be a good fit, let's connect and discuss how I can add value to your team!
+      </p>
+    </section>
+
+    <!-- Right Column: Skills -->
+    <section class="skills-section">
+      <h2 class="section-title">Skills.</h2>
+
+      <div class="skill-category">
+        <h3 class="category-title">FRONTEND</h3>
+        <div class="category-underline"></div>
+        <div class="skill-tags">
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">SCSS</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">Cypress</span>
+        </div>
       </div>
-      <div class="skills-category">
-        <h4>Backend</h4>
-        <span>Java / JEE</span><span>Spring Boot</span>
-        <span>Spring Security</span>
-        <span>Spring Batch</span>
-        <span>Hibernate</span><span>Cucumber</span><span>Mockito</span>
+
+      <div class="skill-category">
+        <h3 class="category-title">BACKEND</h3>
+        <div class="category-underline"></div>
+        <div class="skill-tags">
+          <span class="skill-tag">Java / JEE</span>
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Spring Security</span>
+          <span class="skill-tag">Spring Batch</span>
+          <span class="skill-tag">Hibernate</span>
+          <span class="skill-tag">Cucumber</span>
+          <span class="skill-tag">Mockito</span>
+        </div>
       </div>
-      <div class="skills-category">
-        <h4>Database</h4>
-        <span>SQL</span><span>PostgreSQL</span><span>Oracle</span><span>MySQL</span>
+
+      <div class="skill-category">
+        <h3 class="category-title">DATABASE</h3>
+        <div class="category-underline"></div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Oracle</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
       </div>
-      <div class="skills-category">
-        <h4>DevOps</h4>
-        <span>Docker</span>
-        <span>Docker Swarm</span>
-        <span>GitLab CI</span>
-        <span>GitHub Actions</span>
-        <span>Helm</span>
-        <span>Kubernetes</span>
-        <span>Ansible</span>
+
+      <div class="skill-category">
+        <h3 class="category-title">DEVOPS</h3>
+        <div class="category-underline"></div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Docker Swarm</span>
+          <span class="skill-tag">GitLab CI</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Helm</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">Ansible</span>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </div>
-
-</body>
-</html>

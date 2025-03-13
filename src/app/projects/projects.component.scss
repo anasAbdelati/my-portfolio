@@ -1,146 +1,102 @@
-body{
-  background: #D9D9D9;
-
-}
-
 #projects {
-  padding-top: 60px;
   background: #D9D9D9;
-  position: relative;
-}
-
-#projects .title {
   font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  font-size: 1.5em;
-  position: relative;
-  width: 100%;
-  max-width: 1500px;
-  left: 50%;
-  transform: translateX(-56%);
-  white-space: nowrap;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-#projects .title::after {
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto 50px auto;
+  padding: 0 30px;
+}
+
+.title::after {
   content: '';
+  flex-grow: 1;
+  margin-left: 20px;
   height: 2px;
-  background: #000;
-  flex-grow: 1; /* Allows it to stretch dynamically */
-  margin-left: 20px; /* Keeps space between text and line */
-  width: calc(100% - 200px); /* Extends the line while keeping it controlled */
-  max-width: 1500px; /* Increase to make it longer */
-  display: block;
+  background-color: currentColor;
 }
 
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 30px;
 
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px; // Adjust padding if needed
-  box-sizing: border-box;
-}
-
-.swiper-slide img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  margin-top: 30px;
-}
-
-.swiper-slide h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.swiper-slide p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #000; // Change arrow color if needed
-  position: absolute;
-  top: 50%; // Vertically center the arrows
-  transform: translateY(-50%); // Adjust vertical alignment
-  z-index: 10; // Ensure arrows are above other content
-  width: 30px; // Adjust arrow size
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff; // Arrow background color
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); // Add shadow for better visibility
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 14px; // Adjust arrow icon size
-}
-
-.swiper-button-next {
-  right: 10px; // Position to the right
-}
-
-.swiper-button-prev {
-  left: 10px; // Position to the left
-}
-
-.swiper-pagination-bullet {
-  width: 10px; // Adjust bullet size
-  height: 10px;
-  background-color: #000; // Bullet color
-  opacity: 1;
-  margin: 0 5px;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #007bff; // Active bullet color
-}
-
-.cta-btn {
-  background: #1F1F1F;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 2px solid #1F1F1F;
-  color: #F8F7F9;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: background 0.5s, color 0.5s;
-  border-radius: 5px; /* Adjust the radius value as needed */
-
-  &:hover {
-    background: #F8F7F9;
-    color: #1F1F1F;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 }
 
-.image-container {
-  margin-top: 30px;
-  text-align: center;
-
+.project-card {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.separator {
-  display: inline-block;
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .card-icons {
+    display: flex;
+    gap: 10px;
+
+    a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+
+    .disabled-icon {
+      color: #666;
+      cursor: not-allowed;
+      font-size: 1.2rem;
+    }
+  }
 }
 
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech {
+  background-color: #2d2d2d;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}

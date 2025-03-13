@@ -1,160 +1,158 @@
+$body-background: #d9d9d9;
+$container-background: #d9d9d9;
+$text-color: #333333;
+$border-color: #cccccc;
+$tag-background: #f3f3f3;
+$tag-border: #e0e0e0;
+$tag-hover-background: #eaeaea;
+
+// Global Styles
 body {
-  background: #D9D9D9;
+  background-color: $body-background;
+
+  color: $text-color;
+  line-height: 1.5;
+}
+
+// Container
+.resume-container {
+  background-color: $body-background;
+  padding: 20px;
+  width: 100%;
+}
+
+.resume-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  background-color: $container-background;
+  padding: 30px;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.section-title {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  padding: 50px 0;
+  font-size: 2.5em; /* Adjust the font size as needed */
   position: relative;
-  align-items: flex-start; /* Align content to the top */
-  justify-content: center; /* Keep it centered horizontally */
-  min-height: 80vh; /* Adjust this value to move it further up */
+  margin-bottom: 35px;
+  margin-top:15px;
 }
 
-/* General Title Styling */
-.title {
-  display: flex;
-  align-items: center;
-  font-size: 1.5em; /* Adjust the font size as needed */
-  margin: 20px 0;
-  position: relative;
-}
-
-.title::after {
+.section-title::after {
   content: '';
   flex-grow: 1; /* Allow the line to take up remaining space */
-  height: 2px;
+  height: 1.5px;
   background: #000; /* Color of the line */
   margin-left: 10px; /* Space between text and line */
 }
 
-/* Left section (About Me) */
-.about-me {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  padding-right: 100px;
-  transform: translateX(-70%);
-}
+// About Section
+.about-section {
+  flex: 3;
+  font-family: 'Poppins', sans-serif!important;
 
-.intro {
-  line-height: 1.8;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.highlight {
-  color: #1F1F1F;
-  font-weight: bold;
-}
-
-.intro h2 {
-  font-size: 1.8em;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.intro p {
-  font-size: 1.1em;
-  color: #444;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-.intro .keywords {
-  color: #1F1F1F;
-  font-weight: bold;
-}
-
-.cv {
-  margin-top: 15px;
-}
-
-.cv a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Skills Section */
-.skills {
-  width: 450px; /* Make it wider */
-  text-align: left;
-  position: absolute;
-  right: -150px; /* Adjust to move it further right */
-  top: 50px;
-}
-
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background: #D9D9D9;
-  color: #1F1F1F;
-  padding: 15px;
-  border-radius: 10px;
-  width: 100%; /* Ensure the container adjusts to its parent's width */
-  box-sizing: border-box; /* Include padding in the element's total width and height */
-}
-
-.skills-category {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skills-category h4 {
-  width: 100%;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 2px solid #1F1F1F;
-  padding-bottom: 5px;
-  margin: 0 0 8px 0;
-}
-
-.skills-category span {
-  display: inline-block;
-  background: #D9D9D9;
-  color: #1F1F1F;
-  padding: 4px 8px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: bold;
-  border: 2px solid #1F1F1F;
-  margin: 2px;
-  white-space: nowrap;
-}
-
-/* Media Queries */
-@media (max-width: 1200px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
+  .about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: $text-color;
   }
 
-  .about-me, .skills {
-    position: static;
-    transform: none;
+  .highlight {
+    font-weight: 600;
+  }
+}
+
+// Skills Section
+.skills-section {
+  flex: 2;
+
+  .skill-category {
+    margin-bottom: 25px;
+
+    .category-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 3px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .category-underline {
+      height: 2px;
+      background-color: #333;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #D9D9D9;
+      color: #1F1F1F;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      border: 2px solid #1F1F1F;
+      margin: 2px;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $tag-hover-background;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .resume-content {
+    padding: 20px;
   }
 
-  .about-me {
-    margin-bottom: 50px;
+  .section-title {
+    font-size: 24px;
   }
 
-  .skills {
-    margin: 0 auto;
-    text-align: center;
+  .about-section .about-text {
+    font-size: 14px;
+  }
+
+  .skills-section .skill-category .skill-tag {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-content {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .about-section .about-text {
+    font-size: 13px;
+  }
+
+  .skills-section .skill-category .skill-tag {
+    padding: 4px 8px;
+    font-size: 12px;
   }
 }

@@ -1,59 +1,42 @@
-import { Component, AfterViewInit } from '@angular/core';
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-
-Swiper.use([Navigation, Pagination]);
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
-
 })
-
-export class ProjectsComponent implements AfterViewInit {
+export class ProjectsComponent {
   projects = [
     {
-      image: 'assets/portfolioScreen.png',
       name: 'Portfolio',
-      description: 'its the porfolio that are you are currently in'
+      description: 'It is the portfolio you are currently viewing.',
+      githubUrl: 'https://github.com/anasAbdelati/my-portfolio',
+      liveUrl: 'https://anasabdelati.github.io/my-portfolio/',
+      technologies: ['Angular', 'TypeScript', 'SCSS']
     },
     {
-      image: 'assets/mobileApp.png',
       name: 'Android application',
-      description: 'mobile application for restaurant reservation, I am still working on this project which is why its still private on my github'
+      description: 'A mobile application for restaurant reservations. This app displays' +
+        ' nearby restaurants using the Google API, allowing users to filter results based on ' +
+        'their preferences. Users can leave reviews and ratings for restaurants and make reservations directly through the app.',
+      githubUrl: '',
+      liveUrl: '',
+      technologies: ['Android', 'Java', 'Firebase']
     },
     {
-      image: 'assets/api.png',
       name: 'VirVoile Rest Api',
-      description: "I developed the backend with Spring Boot, implemented the CI/CD pipeline using " +
-        "GitLab CI, and deployed the application with Docker Swarm. This API was used by a sailing simulator for professionals."
+      description: "A REST API with a front-end used only for testing. This API is directly utilized by the <a href=\"https://opencollective.com/virvoile\" target=\"_blank\">VirVoile</a> " +
+        "3D sailing race simulator. ( the owner of the project made it private 🙁)",
+      githubUrl: '',
+      liveUrl: '',
+      technologies: ['Spring Boot','Java','JavaFx','React', 'Docker', 'GitLab CI', 'Docker Swarm','PostgreSQL']
     },
     {
-      image: 'assets/Loading.png',
-      name: 'Comming Soon',
-      description: ''
+      name: 'Coming Soon',
+      description: 'more projects will be added soon.',
+      githubUrl: '',
+      liveUrl: '',
+      technologies: []
     },
   ];
-
-  ngAfterViewInit(): void {
-    new Swiper('.swiper-container', {
-      slidesPerView: 3, // Number of slides to show
-      spaceBetween: 30, // Space between slides
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      loop: true,
-    });
-  }
-
-  viewProject(project: any) {
-    // Handle view project action
-    console.log(project);
-  }
 }
