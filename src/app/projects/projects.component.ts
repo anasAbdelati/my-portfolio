@@ -12,7 +12,7 @@ export class ProjectsComponent {
       description: 'It is the portfolio you are currently viewing.',
       githubUrl: 'https://github.com/anasAbdelati/my-portfolio',
       liveUrl: 'https://anasabdelati.github.io/my-portfolio/',
-      technologies: ['Angular', 'TypeScript', 'SCSS']
+      technologies: ['Angular', 'TypeScript', 'SCSS','Github Actions']
     },
     {
       name: 'Android application',
