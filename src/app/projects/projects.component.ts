@@ -19,7 +19,7 @@ export class ProjectsComponent {
       description: 'A mobile application for restaurant reservations. This app displays' +
         ' nearby restaurants using the Google API, allowing users to filter results based on ' +
         'their preferences. Users can leave reviews and ratings for restaurants and make reservations directly through the app.',
-      githubUrl: '',
+      githubUrl: 'https://github.com/anasAbdelati/Food.fr',
       liveUrl: '',
       technologies: ['Android', 'Java', 'Firebase']
     },
