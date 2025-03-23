@@ -1,65 +1,53 @@
-// experience.component.scss
+@import '../../../styles/variables';
 
-// Variables to match your existing styles
-$body-background: #d9d9d9;
-$card-background: #121212;
-$text-color-light: white;
-$text-color-dark: #333333;
-
-// Main container - matching the About Me section
-
-body{
-  background-color: $body-background;
-
+body {
+  background-color: $color-bg-light;
 }
+
 .experience-section {
   max-width: 1600px;
   margin: 0 auto;
   padding: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-main;
 
-  @media (max-width: 992px) {
+  @media (max-width: $break-md) {
     padding: 20px;
   }
 }
 
-// Title with line - exactly like your About Me section
 .section-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-main;
   display: flex;
   align-items: center;
   font-size: 2.5em;
   position: relative;
-  margin-bottom: 35px;
-  margin-top: 15px;
+  margin: 15px 0 35px;
+
+  &::after {
+    content: '';
+    flex-grow: 1;
+    height: 1.5px;
+    background: #000;
+    margin-left: 10px;
+  }
 }
 
-.section-title::after {
-  content: '';
-  flex-grow: 1;
-  height: 1.5px;
-  background: #000;
-  margin-left: 10px;
-}
-
-// Experience card
 .experience-card {
-  background-color: $card-background;
+  background-color: #121212;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
-  color: $text-color-light;
+  color: $color-text-light;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-// Header section
 .experience-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 15px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $break-sm) {
     flex-direction: column;
   }
 }
@@ -67,22 +55,22 @@ body{
 .experience-title {
   font-size: 1.2rem;
   font-weight: 600;
-  margin: 0 0 5px 0;
+  margin: 0 0 5px;
 }
 
 .experience-company {
   margin: 0;
   opacity: 0.8;
   font-size: 1rem;
-}
 
-.experience-company a {
-  color: $text-color-light;
-  text-decoration: none;
-  transition: color 0.2s;
+  a {
+    color: $color-text-light;
+    text-decoration: none;
+    transition: color 0.2s;
 
-  &:hover {
-    color: #FFD700;
+    &:hover {
+      color: #ffd700;
+    }
   }
 }
 
@@ -91,12 +79,11 @@ body{
   font-style: italic;
   opacity: 0.8;
 
-  @media (max-width: 768px) {
+  @media (max-width: $break-sm) {
     margin-top: 5px;
   }
 }
 
-// Description
 .experience-description {
   font-size: 1rem;
   line-height: 1.7;
@@ -108,7 +95,6 @@ body{
   }
 }
 
-// Skills section
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
@@ -116,8 +102,8 @@ body{
 }
 
 .skill-tag {
-  background-color: #333;
-  color: white;
+  background-color: $color-text-dark;
+  color: $color-text-light;
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -125,8 +111,7 @@ body{
   margin-bottom: 5px;
 }
 
-// Responsive adjustments matching your About Me section
-@media (max-width: 768px) {
+@media (max-width: $break-sm) {
   .section-title {
     font-size: 24px;
   }
@@ -141,7 +126,7 @@ body{
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $break-xs) {
   .section-title {
     font-size: 22px;
   }

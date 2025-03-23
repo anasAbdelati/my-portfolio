@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import '../../../styles/variables';
 
 .footer {
-  background-color: #1F1F1F;
-  color: #F8F7F9;
+  background-color: $color-bg-dark;
+  color: $color-text-light;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 4.8rem 0;
   font-size: 12px;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: $font-alt !important;
   letter-spacing: 6px;
-  flex-direction: column;
   text-align: center;
 
   &__text {
@@ -25,74 +25,73 @@
 
       &:hover,
       &:active {
-        color: #D9D9D9;
+        color: $color-bg-light;
         -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
       }
     }
   }
 
-  & hr {
+  hr {
     margin: 1rem auto;
     border: 0;
     width: 50%;
     border-top: 2px solid grey;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $color-text-light;
+  }
 }
 
-.footer .container {
+.icones {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-
-.icones{
-
-  display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-direction: row;
+  margin-bottom: 10px;
 
   img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10px 10px;
+    margin: 10px;
     transition: all 0.2s ease-in;
 
     &:hover {
       transform: translateY(-2px);
     }
   }
-
-  margin-bottom: 10px;
 }
 
-.top-section{
-  margin: 0px 0 20px;
+.top-section {
+  margin: -40px 0 20px;
   transition: all 0.2s ease-in;
-  color: white;
-  margin-top: -40px!important;
+  color: $color-text-light;
+
   &:hover {
     transform: translateY(-2px);
   }
 }
 
-.footer__text{
+.footer__text {
   font-size: 12px;
   letter-spacing: 3px !important;
+  margin-bottom: -60px;
 
-  a{
+  a {
     font-size: 12px;
   }
-  margin-bottom: -60px;
 }
-.icone_cv{
+
+.icone_cv {
   width: 35px;
   height: 35px;
 }
 
 .back-to-top i {
-  color: white;
+  color: $color-text-light;
 }
