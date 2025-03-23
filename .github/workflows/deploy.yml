@@ -20,6 +20,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Inject EmailJS Secrets into environment.prod.ts
+        run: |
+          npm install ts-node
+          npx ts-node scripts/set-env.ts
+        env:
+          EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+          EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+
       - name: Build Angular Project
         run: |
           npx ng build --configuration production --output-path docs --base-href /my-portfolio/ --deploy-url /my-portfolio/
