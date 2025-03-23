@@ -1,0 +1,11 @@
+<div class="contact-me" id="contactMe">
+  <div class="title">
+    <h1>Contact.</h1>
+  </div>
+  <form (submit)="sendEmail($event)" class="contact-form">
+    <input type="text" name="name" placeholder="NAME *" required>
+    <input type="email" name="email" placeholder="EMAIL *" required>
+    <textarea name="message" placeholder="MESSAGE *" required></textarea>
+    <button type="submit" class="submit-btn">SUBMIT</button>
+  </form>
+</div>

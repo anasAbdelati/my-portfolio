@@ -21,7 +21,7 @@ export class AppComponent {
         '<br>Following an Agile SCRUM methodology, I contributed by designing, developing, and integrating a Java Spring Boot microservice. I implemented ' +
         'rigorous unit and integration testing using Cucumber & Mockito and deployed cloud-native services using Helm & Kubernetes. Additionally, I worked' +
         ' closely with air traffic management experts to refine trajectory optimization models.<br>' +
-        'This experience allowed me to bridge the gap between software engineering and real-world aviation operations, contributing directly to European efforts in sustainable aviation.\'<br>',
+        'This experience allowed me to bridge the gap between software engineering and real-world aviation operations, contributing directly to European efforts in sustainable aviation.<br>',
       skills: ['Java (JEE)', 'Spring Boot', 'Cucumber','Mockito', 'Helm', 'React', 'Gitlab CI', 'Kubernetes'],
       link: 'https://www.thalesgroup.com/en'
     },
