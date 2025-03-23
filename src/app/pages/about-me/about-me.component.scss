@@ -1,22 +1,13 @@
-$body-background: #d9d9d9;
-$container-background: #d9d9d9;
-$text-color: #333333;
-$border-color: #cccccc;
-$tag-background: #f3f3f3;
-$tag-border: #e0e0e0;
-$tag-hover-background: #eaeaea;
+@import '../../../styles/variables';
 
-// Global Styles
 body {
-  background-color: $body-background;
-
-  color: $text-color;
+  background-color: $color-bg-light;
+  color: $color-text-dark;
   line-height: 1.5;
 }
 
-// Container
 .resume-container {
-  background-color: $body-background;
+  background-color: $color-bg-light;
   padding: 20px;
   width: 100%;
 }
@@ -26,43 +17,41 @@ body {
   margin: 0 auto;
   display: flex;
   gap: 50px;
-  background-color: $container-background;
+  background-color: $color-bg-light;
   padding: 30px;
 
-  @media (max-width: 992px) {
+  @media (max-width: $break-md) {
     flex-direction: column;
     gap: 30px;
   }
 }
 
 .section-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-main;
   display: flex;
   align-items: center;
-  font-size: 2.5em; /* Adjust the font size as needed */
+  font-size: 2.5em;
   position: relative;
-  margin-bottom: 35px;
-  margin-top:15px;
+  margin: 15px 0 35px;
+
+  &::after {
+    content: '';
+    flex-grow: 1;
+    height: 1.5px;
+    background: #000;
+    margin-left: 10px;
+  }
 }
 
-.section-title::after {
-  content: '';
-  flex-grow: 1; /* Allow the line to take up remaining space */
-  height: 1.5px;
-  background: #000; /* Color of the line */
-  margin-left: 10px; /* Space between text and line */
-}
-
-// About Section
 .about-section {
   flex: 3;
-  font-family: 'Poppins', sans-serif!important;
+  font-family: $font-main !important;
 
   .about-text {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: $text-color;
+    color: $color-text-dark;
   }
 
   .highlight {
@@ -70,7 +59,6 @@ body {
   }
 }
 
-// Skills Section
 .skills-section {
   flex: 2;
 
@@ -80,14 +68,14 @@ body {
     .category-title {
       font-size: 16px;
       font-weight: 600;
-      margin: 0 0 3px 0;
+      margin: 0 0 3px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
     .category-underline {
       height: 2px;
-      background-color: #333;
+      background-color: $color-text-dark;
       width: 100%;
       margin-bottom: 15px;
     }
@@ -101,25 +89,24 @@ body {
 
     .skill-tag {
       display: inline-block;
-      background: #D9D9D9;
-      color: #1F1F1F;
+      background: $color-bg-light;
+      color: $color-bg-dark;
       padding: 4px 8px;
       border-radius: 5px;
       font-size: 14px;
       font-weight: bold;
-      border: 2px solid #1F1F1F;
+      border: 2px solid $color-bg-dark;
       margin: 2px;
       white-space: nowrap;
 
       &:hover {
-        background-color: $tag-hover-background;
+        background-color: $color-tag-hover;
       }
     }
   }
 }
 
-// Responsive adjustments
-@media (max-width: 768px) {
+@media (max-width: $break-sm) {
   .resume-content {
     padding: 20px;
   }
@@ -138,7 +125,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $break-xs) {
   .resume-content {
     padding: 15px;
   }
