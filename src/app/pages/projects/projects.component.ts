@@ -32,6 +32,13 @@ export class ProjectsComponent {
       technologies: ['Spring Boot','Java','JavaFx','React', 'Docker', 'GitLab CI', 'Docker Swarm','PostgreSQL']
     },
     {
+      name: 'Crypto API',
+      description: "A side project REST API to register users via Keycloak and fetch crypto coin data. Includes email alerts based on price thresholds or recurring intervals. Documented with Swagger UI.",
+      githubUrl: 'https://github.com/anasAbdelati/crypto-api',
+      liveUrl: '',
+      technologies: ['Java', 'Spring Boot', 'Spring Security', 'Junit5', 'Cucumber', 'Keycloak', 'Docker', 'Docker Compose', 'GitHub Actions', 'OpenAPI / Swagger']
+    },
+    {
       name: 'Coming Soon',
       description: 'more projects will be added soon.',
       githubUrl: '',
